@@ -19,16 +19,16 @@ security:
 - {}
 tags:
 - description: not yet ready
-  name: welcome
+  name: wev
 paths:
-  /welcome:
+  /wev:
     post:
-      operationId: createwelcome
+      operationId: createwev
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/welcome'
+              $ref: '#/components/schemas/wev'
         description: data to be created
         required: true
       responses:
@@ -36,20 +36,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/welcome'
+                $ref: '#/components/schemas/wev'
           description: successful operation
       summary: Creates the data
       tags:
-      - welcome
-      x-eov-operation-handler: controllers/WelcomeController
-  /welcome/{welcomeId}:
+      - wev
+      x-eov-operation-handler: controllers/WevController
+  /wev/{wevId}:
     delete:
-      operationId: deletewelcome
+      operationId: deletewev
       parameters:
       - description: the Id parameter
         explode: false
         in: path
-        name: welcomeId
+        name: wevId
         required: true
         schema:
           type: string
@@ -59,15 +59,15 @@ paths:
           description: successful operation
       summary: Delete the element
       tags:
-      - welcome
-      x-eov-operation-handler: controllers/WelcomeController
+      - wev
+      x-eov-operation-handler: controllers/WevController
     get:
-      operationId: getwelcome
+      operationId: getwev
       parameters:
       - description: the Id parameter
         explode: false
         in: path
-        name: welcomeId
+        name: wevId
         required: true
         schema:
           type: string
@@ -77,19 +77,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/welcome'
+                $ref: '#/components/schemas/wev'
           description: successful operation
       summary: Get the element
       tags:
-      - welcome
-      x-eov-operation-handler: controllers/WelcomeController
+      - wev
+      x-eov-operation-handler: controllers/WevController
     put:
-      operationId: updatewelcome
+      operationId: updatewev
       parameters:
       - description: the Id parameter
         explode: false
         in: path
-        name: welcomeId
+        name: wevId
         required: true
         schema:
           type: string
@@ -98,39 +98,39 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/welcome'
+              $ref: '#/components/schemas/wev'
         description: data to be updated
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/welcome'
+                $ref: '#/components/schemas/wev'
           description: successful operation
       summary: Updates the element
       tags:
-      - welcome
-      x-eov-operation-handler: controllers/WelcomeController
-  /welcome/getAll:
+      - wev
+      x-eov-operation-handler: controllers/WevController
+  /wev/getAll:
     get:
-      operationId: getAllwelcome
+      operationId: getAllwev
       responses:
         "200":
           content:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/welcome'
+                  $ref: '#/components/schemas/wev'
                 type: array
           description: successful operation
       summary: Get all the data
       tags:
-      - welcome
+      - wev
       x-method-getAll: "true"
-      x-eov-operation-handler: controllers/WelcomeController
-  /welcome/getByParams:
+      x-eov-operation-handler: controllers/WevController
+  /wev/getByParams:
     get:
-      operationId: getByParamswelcome
+      operationId: getByParamswev
       parameters:
       - description: the query based on which the search is performed
         explode: true
@@ -146,25 +146,25 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/welcome'
+                  $ref: '#/components/schemas/wev'
                 type: array
           description: successful operation
       summary: Get all the data based on user query
       tags:
-      - welcome
+      - wev
       x-method-get-by-params: "true"
-      x-eov-operation-handler: controllers/WelcomeController
+      x-eov-operation-handler: controllers/WevController
 components:
   schemas:
-    welcome:
+    wev:
       example:
-        welcomeTitle: welcomeTitle
+        tile: tile
         _id: _id
       properties:
         _id:
           type: string
-        welcomeTitle:
+        tile:
           type: string
       required:
-      - welcomeTitle
+      - tile
       type: object

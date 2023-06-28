@@ -1,5 +1,5 @@
-const WelcomeService = require('./WelcomeService');
+const WevService = require('./WevService');
 
 module.exports = {
-  WelcomeService,
+  WevService,
 };

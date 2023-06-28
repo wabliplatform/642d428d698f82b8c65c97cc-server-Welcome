@@ -1,4 +1,4 @@
-const welcome = require('./welcome');
+const wev = require('./wev');
 
 module.exports = {
-  welcome};
+  wev};

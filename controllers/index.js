@@ -1,5 +1,5 @@
-const WelcomeController = require('./WelcomeController');
+const WevController = require('./WevController');
 
 module.exports = {
-  WelcomeController,
+  WevController,
 };
