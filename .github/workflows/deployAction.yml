@@ -15,5 +15,5 @@ jobs:
           port: ${{ secrets.WABLI_SERVER_SSH_PORT }}
           script: >-
             ./wabli-applications/deploy.sh -b main -d wabli-bme-1 -r
-            https://github.com/wabliplatform/642d428d698f82b8c65c97cc-server-Welcome.git
+            https://github.com/fasfalisn/642d428d698f82b8c65c97cc-server-Welcome.git
             -f 642d428d698f82b8c65c97cc-server-Welcome -p 4011
